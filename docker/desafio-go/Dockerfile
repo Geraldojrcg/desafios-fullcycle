@@ -4,7 +4,7 @@ WORKDIR $GOPATH/src/fullcycle/desafio-go/
 
 COPY . .
 
-RUN go build -o /go/bin/desafio
+RUN go build -ldflags "-s -w" -o /go/bin/desafio
 
 FROM scratch
 
